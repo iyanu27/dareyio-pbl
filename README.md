@@ -174,10 +174,15 @@ You have just automated your routine tasks by implementing your first Ansible pr
  
 Credits:
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04
+
 Darey.io
+
 Ansible Documentation — Ansible Documentation
+
 What is Ansible and How To Use Ansible in Docker? (simplilearn.com)
+
 How to Merge Branches and Pull Requests in GitHub (zepel.io)
+
 
 
 
