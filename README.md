@@ -1,5 +1,7 @@
 # dareyio-pbl
-DAREY.IO PROJECTS
+DAREY.IO PROJECTS 
+
+## Link to the github repository that consists of the playbook and inventory https://github.com/iyanu27/ansible-config-mgt.git
 
 ## PROJECT 11- Ansible Configuration Management
 
