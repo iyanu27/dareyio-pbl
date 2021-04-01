@@ -175,6 +175,7 @@ Congratulations
 You have just automated your routine tasks by implementing your first Ansible project! There is more exciting projects ahead, so lets keep it moving!
  
 Credits:
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04
 
 Darey.io
