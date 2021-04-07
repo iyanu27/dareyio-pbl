@@ -68,8 +68,24 @@ Final result shows the playbook ran successfully
 
 Make sure that wireshark is deleted on all the servers by running wireshark --version
 
-
 Now you have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
+
+## Step 3 - Configure UAT Webservers with a role ‘Webserver’
+
+We have our nice and clean dev environment, so let us put it aside and configure 2 new Web Servers as uat. We could write tasks to configure Web Servers in the same playbook, but it would be too messy, instead, we will use a dedicated role to make our configuration reusable.
+
+To create a role, you must create a directory called roles/, relative to the playbook file or in /etc/ansible/ directory.
+There are two ways how you can create this folder structure:
+
+1. Use an Ansible utility called ansible-galaxy inside ansible-config-mgt/roles directory (you need to create roles directory upfront)
+
+![image](https://user-images.githubusercontent.com/57386428/113930219-dabab800-97a5-11eb-8d3b-a68ace458cad.png)
+After removing unnecessary directories and files, the roles structure should look like this
+![image](https://user-images.githubusercontent.com/57386428/113931603-87496980-97a7-11eb-96f2-76c0f67121a2.png)
+2. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
+![image](https://user-images.githubusercontent.com/57386428/113933051-fa071480-97a8-11eb-80e9-9c879826be07.png)
+3. In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path = /home/Iyanu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+
 
 
 
