@@ -110,6 +110,11 @@ Commit your changes, create a Pull Request and merge them to master branch, make
 
 Now run the playbook against your uat inventory and see what happens:
 
+While runnin the playbook i got the error below:
+![image](https://user-images.githubusercontent.com/57386428/116403932-ffbdac00-a7e2-11eb-86ec-b59c35a711f0.png)
+
+
+
 
 
 
