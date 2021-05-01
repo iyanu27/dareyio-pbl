@@ -82,16 +82,21 @@ There are two ways how you can create this folder structure:
 ![image](https://user-images.githubusercontent.com/57386428/113934238-59b1ef80-97aa-11eb-93e3-3ba85360afca.png)
 After removing unnecessary directories and files, the roles structure should look like this
 ![image](https://user-images.githubusercontent.com/57386428/113934571-c88f4880-97aa-11eb-91f3-5789eb0b87de.png)
+
 2. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
-![image](https://user-images.githubusercontent.com/57386428/113933051-fa071480-97a8-11eb-80e9-9c879826be07.png)
+![image](https://user-images.githubusercontent.com/57386428/116764451-fc3e4680-a9d5-11eb-9ccf-1162a3074c5c.png)
+
 3. In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path = /home/Iyanu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+
 ![image](https://user-images.githubusercontent.com/57386428/113935642-9d592900-97ab-11eb-85f1-0a331887f438.png)
+
 4.It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
     Install and configure Apache (httpd service)
     Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
     Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
     Make sure httpd service is started
- ![image](https://user-images.githubusercontent.com/57386428/113936605-da71eb00-97ac-11eb-8425-e1b1123b3e54.png)
+ ![image](https://user-images.githubusercontent.com/57386428/116764372-c13c1300-a9d5-11eb-89d2-2fe33720dcea.png)
+
     
 ## Step 4 - Reference ‘Webserver’ role
 1. Within the static-assignments folder, create a new assignment for uat-webservers uat-webservers.yml. This is where you will reference the role.
@@ -111,7 +116,14 @@ Commit your changes, create a Pull Request and merge them to master branch, make
 Now run the playbook against your uat inventory and see what happens:
 
 While runnin the playbook i got the error below:
-![image](https://user-images.githubusercontent.com/57386428/116403932-ffbdac00-a7e2-11eb-86ec-b59c35a711f0.png)
+![image](https://user-images.githubusercontent.com/57386428/116764260-6aced480-a9d5-11eb-8aac-94f463568839.png)
+
+
+I wass able to see both of your UAT Web servers configured and you can try to reach them from your browser:
+
+![image](https://user-images.githubusercontent.com/57386428/116764245-5e4a7c00-a9d5-11eb-932d-84fa436fa99d.png)
+![image](https://user-images.githubusercontent.com/57386428/116764273-76ba9680-a9d5-11eb-93da-38435fc44b21.png)
+
 
 
 
